@@ -103,5 +103,5 @@ The job listings are saved in a CSV file with the following columns:
 - More advanced error handling.
 
 ## Credits
--Asha Cumberbatch
--Lathelia Brathwaite
+- Asha Cumberbatch
+- Lathelia Brathwaite
