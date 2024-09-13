@@ -1,4 +1,3 @@
-
 # KIlo-Scraper
 ![web](web.jpg)
 # Cyber Security Job Scraper
@@ -102,3 +101,7 @@ The job listings are saved in a CSV file with the following columns:
 - Support for additional filtering options (e.g., job location, salary).
 - Add options to save in other formats like JSON or Excel.
 - More advanced error handling.
+
+## Credits
+-Asha Cumberbatch
+-Lathelia Brathwaite
