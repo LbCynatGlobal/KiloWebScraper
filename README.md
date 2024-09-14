@@ -98,8 +98,7 @@ The job listings are saved in a CSV file with the following columns:
 
 ## Future Enhancements
 
-- Support for additional filtering options (e.g., job location, salary).
-- Add options to save in other formats like JSON or Excel.
+- Add options to save in other formats like JSON.
 - More advanced error handling.
 
 ## Credits
