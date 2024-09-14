@@ -12,7 +12,7 @@ querystring = {
 
 # Define the request headers
 headers = {
-    "x-rapidapi-key": "0beb7f2182mshdaa8d0a1d500f2ep1490ebjsnc5d5ee125d5d", 
+   "x-rapidapi-key": "YOUR_API_KEY",  # Replace with your actual API key
     "x-rapidapi-host": "jsearch.p.rapidapi.com"
 }
 
