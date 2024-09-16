@@ -91,7 +91,7 @@ The job listings are saved in a CSV file with the following columns:
 - **Remote**: Indicates if the job is remote.
 - **Job Link**: URL to apply for the job.
 
-[CSV file](cyber_sercurityjobs.csv)
+[CSV file](cyber_securityjobs.csv)
 
 ## Error Handling
 
