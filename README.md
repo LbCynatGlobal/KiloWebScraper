@@ -4,6 +4,17 @@
 
 This Python project fetches **entry-level cybersecurity** job listings from the [JSearch API on RapidAPI](https://rapidapi.com/letscrape-6bRBa3QguO5/api/jsearch) and saves the results in a CSV file. The tool filters jobs that are remote and provides detailed information such as job title, company, description, employment type, and more.
 
+## Table of Contents
+- [Features](#features)
+- [Prerequisites](#prerequisites)
+- [API Key](#api-key)
+- [Usage](#usage)
+- [Customization](#customization)
+- [Output](#output)
+- [Error Handling](#error-handling)
+- [Future Enhancements](#future-enhancements)
+- [Credits](#credits)
+
 ## Features
 
 - Fetches **entry-level cybersecurity** jobs from the JSearch API.
