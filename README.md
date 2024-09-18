@@ -63,9 +63,9 @@ You need an API key from [RapidAPI's JSearch API](https://rapidapi.com/letscrape
 3. **Run the script**:
    To retrieve the job listings and save them to a CSV file, execute the script:
 
-   ```bash
-   py jsearchscraper.py
-   ```
+    ```python
+      py KiloJsearchScraper.py
+    ```
 
 4. The script will output the job listings to a CSV file named `cyber_securityjobs.csv`.
 
