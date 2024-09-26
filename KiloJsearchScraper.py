@@ -1,5 +1,8 @@
 import requests
+from datetime import datetime, timedelta
 import csv
+
+
 
 # Define the API endpoint and query parameters
 url = "https://jsearch.p.rapidapi.com/search"
@@ -12,8 +15,8 @@ querystring = {
 
 # Define the request headers
 headers = {
-   "x-rapidapi-key": "YOUR_API_KEY",  # Replace with your actual API key
-    "x-rapidapi-host": "jsearch.p.rapidapi.com"
+    'x-rapidapi-key': "YOUR ACTUAL API KEY!",
+    'x-rapidapi-host': "jsearch.p.rapidapi.com"
 }
 
 # Function to retrieve and filter cybersecurity-related jobs from the API
@@ -47,7 +50,12 @@ def get_cyber_securityjobs():
                 #job_posting_language = job.get('job_posting_language', 'Unknown')
 
                 location = (job.get('job_city') or 'No City Provided') + ", " + (job.get('job_state') or 'No State Provided')
+                job_min_salary = job.get('job_min_salary', 'No Salary Provided')
+                job_max_salary = job.get('job_max_salary', 'No Salary Provided')
+                job_posted = job.get('job_posted_at_datetime_utc', 'No Job Posted Date Provided')
+                job_expiration = job.get('job_offer_expiration_datetime_utc', 'No Job Expiration Date Provided')
                 job_link = job.get('job_apply_link', 'No Job Link Provided')
+                
 
                 # Determine remote status based on the API response
                 remote = "Yes" if job.get('job_is_remote', False) else "No"
@@ -63,6 +71,10 @@ def get_cyber_securityjobs():
                     #'Job Posting Language': job_posting_language,
                     'Location': location,
                     'Remote': remote,
+                    'Min Salary': job_min_salary,
+                    'Max Salary': job_max_salary,
+                    'Job Posted': job_posted,
+                    'Job Expiration': job_expiration,
                     'Job Link': job_link
                 })
                 print(f"Added job: {job_title}")
@@ -88,7 +100,7 @@ def save_to_csv(jobs, filename="cyber_securityjobs.csv"):
                 "Job Title", "Description", "Company", "Employer Logo", "Employer Website", 
                 "Job Publisher", "Employment Type", #"Job Posting Language", 
                 "Location", 
-                "Remote", "Job Link"
+                "Remote", "Min Salary", "Max Salary", "Job Posted", "Job Expiration", "Job Link"
             ])
 
             for job in jobs:
@@ -103,6 +115,10 @@ def save_to_csv(jobs, filename="cyber_securityjobs.csv"):
                     #job['Job Posting Language'],
                     job['Location'],
                     job['Remote'],
+                    job['Min Salary'],
+                    job['Max Salary'],
+                    job['Job Posted'],
+                    job['Job Expiration'],
                     job['Job Link']
                 ])
         print(f"Successfully saved {len(jobs)} job listings to {filename}")
