@@ -1,8 +1,6 @@
 import requests
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 import csv
-
-
 
 # Define the API endpoint and query parameters
 url = "https://jsearch.p.rapidapi.com/search"
